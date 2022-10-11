@@ -1,0 +1,2 @@
+Tests: libntlm
+Depends: build-essential, libntlm0-dev, man, pkg-config

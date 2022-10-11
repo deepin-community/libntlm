@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+
+touch $WORKDIR/config.h
+for f in $(ls test*.c); do
+    gcc -I$WORKDIR -Igl -o $WORKDIR/foo $f -DNTLM_SRCDIR='"."' gl/des.c gl/md4.c `pkg-config --cflags --libs libntlm`
+    echo PASS: gcc $f
+    $WORKDIR/foo
+    echo PASS: $f
+done
+
+cd $WORKDIR
+cat <<EOF > libntlmtest.c
+#include <ntlm.h>
+
+int main(void)
+{
+  if (!ntlm_check_version (NTLM_VERSION))
+    return 1;
+
+  return 0;
+}
+EOF
+
+gcc -o libntlmtest libntlmtest.c `pkg-config --cflags --libs libntlm`
+echo "PASS: gcc"
+
+[ -x libntlmtest ]
+./libntlmtest
+echo "PASS: run"

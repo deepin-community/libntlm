@@ -1,0 +1,207 @@
+libntlm (1.6-4) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Authentication Maintainers <pkg-auth-maintainers@lists.alioth.debian.org>  Thu, 19 May 2022 10:21:39 +0800
+
+libntlm (1.6-4) unstable; urgency=medium
+
+  * [39c9827] Use gbp dch id-length 7.
+  * [a198d58] Update Standards-Version to 4.6.0.
+  * [8fb7138] Improve autopkgtests, use upstream self-tests.
+
+ -- Simon Josefsson <simon@josefsson.org>  Fri, 20 Aug 2021 09:56:08 +0200
+
+libntlm (1.6-3) unstable; urgency=low
+
+  * Update Standards-Version to 4.5.1.
+  * Add autopkgtest.
+  * Update d/watch to version 4.
+  * Wrap-and-sort -b.
+  * Put docs in libntlm0 package so everyone has it.
+  * Add AUTHORS/THANKS to docs.
+
+ -- Simon Josefsson <simon@josefsson.org>  Thu, 19 Nov 2020 09:09:31 +0100
+
+libntlm (1.6-2) unstable; urgency=low
+
+  * Bump B-D debhelper-compat from 12 to 13.
+  * Ignore .la file.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sun, 01 Nov 2020 17:51:28 +0100
+
+libntlm (1.6-1) unstable; urgency=low
+
+  * New upstream version.
+    - Fixed CVE-2019-17455 security issue. Closes: #942145.
+  * Add Rules-Requires-Root: no.
+  * Replace debian/compat with B-D on debhelper-compat (= 12).
+  * Update Standards-Version from 4.4.0 to 4.5.0.
+  * Use https in Homepage:.
+  * Update upstream signing key.  Fixes public-upstream-key-not-minimal.
+  * Add upstream/metadata.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sun, 19 Apr 2020 10:42:28 +0200
+
+libntlm (1.5-3) unstable; urgency=low
+
+  * Use https URL in d/copyright.
+  * Move d/upstream-signing-key.pgp to d/upstream/signing-key.asc.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sat, 10 Aug 2019 19:10:28 +0200
+
+libntlm (1.5-2) unstable; urgency=low
+
+  * Bump debhelper/compat from 11 to 12.
+  * Update Standards-Version from 4.2.0 to 4.4.0.
+  * Fix URL in README.source.
+  * Update upstream-signing-key.pgp.
+  * Add Build-Depends-Package to libntlm0.symbols.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sat, 20 Jul 2019 20:57:31 +0200
+
+libntlm (1.5-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump debhelper/compat from 9 to 11.
+    - Drop --parallel and --with autoreconf.
+    - Drop Build-Depends on dh-autoreconf.
+  * Update Standards-Version from 3.9.8 to 4.2.0.
+  * Reflect move to salsa in Vcs-* URLs.
+  * Change maintainer to pkg-auth-maintainers instead of pkg-xmpp-devel.
+  * Update copyright file (no license changes).
+  * Use https watch URI.
+  * Make libntlm0-dev Multi-Arch: same.
+
+ -- Simon Josefsson <simon@josefsson.org>  Fri, 24 Aug 2018 22:03:11 +0200
+
+libntlm (1.4-8) unstable; urgency=low
+
+  * Use https URLs in Vcs-Browser and Vcs-Git.
+  * Update Standards-Version from 3.9.6 to 3.9.8.
+  * Build with hardening=+all.
+
+ -- Simon Josefsson <simon@josefsson.org>  Mon, 18 Jul 2016 14:59:25 +0200
+
+libntlm (1.4-7) unstable; urgency=low
+
+  * Move to collab-maint.  Closes: #781202.
+  * Add debian/gbp.conf and update debian/README.source.
+  * Silence description-contains-invalid-control-statement.
+
+ -- Simon Josefsson <simon@josefsson.org>  Tue, 21 Apr 2015 09:10:45 +0200
+
+libntlm (1.4-6) unstable; urgency=low
+
+  * Bump Standards-Version from 3.9.5 to 3.9.6.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sat, 03 Jan 2015 00:02:40 +0100
+
+libntlm (1.4-5) unstable; urgency=low
+
+  * Clarify gnulib files in copyright.  Mention ntlm.h* too.
+
+ -- Simon Josefsson <simon@josefsson.org>  Thu, 13 Nov 2014 12:51:10 +0100
+
+libntlm (1.4-4) unstable; urgency=low
+
+  * Don't use autotools-dev since we use dh-autoreconf.
+
+ -- Simon Josefsson <simon@josefsson.org>  Mon, 15 Sep 2014 23:12:47 +0200
+
+libntlm (1.4-3) unstable; urgency=low
+
+  * Fix License: header in copyright to silence lintian.
+
+ -- Simon Josefsson <simon@josefsson.org>  Fri, 12 Sep 2014 16:00:52 +0200
+
+libntlm (1.4-2) unstable; urgency=low
+
+  * Add debian/upstream-signing-key.pgp.
+  * Improve watch file (pgp).
+  * Bump Standards-Version from 3.9.4 to 3.9.5.
+  * Use dh --parallel.
+
+ -- Simon Josefsson <simon@josefsson.org>  Tue, 22 Apr 2014 20:20:18 +0200
+
+libntlm (1.4-1) unstable; urgency=low
+
+  * New upstream version.
+    - Calls AM_PROG_AR.  Closes: #713321
+    - Tarball contains all files.  Dropping the dh_auto_clean workaround.
+
+ -- Simon Josefsson <simon@josefsson.org>  Mon, 08 Jul 2013 11:23:20 +0200
+
+libntlm (1.2-3) unstable; urgency=low
+
+  * Moved from experimental to unstable.
+
+ -- Simon Josefsson <simon@josefsson.org>  Tue, 14 May 2013 11:18:36 +0200
+
+libntlm (1.2-2) experimental; urgency=low
+
+  * Add README.source.
+  * Bump compat from 5 to 9.
+  * Build-Depend on autotools-dev and dh-autoreconf.
+  * Bump Standards-Version from 3.8.4 to 3.9.4.
+  * Update Homepage field with current URL.
+  * Add Vcs-Git and Vcs-Browser fields.
+  * Make multiarch friendly.
+  * Use machine readable copyright file.
+  * Drop *.dirs files.
+  * Add libntlm0.symbols file.
+  * Rewrite rules file, now uses "dh".
+  * Added source/format as 3.0 (quilt).
+  * Update watch file.
+
+ -- Simon Josefsson <simon@josefsson.org>  Sat, 11 May 2013 23:37:28 +0200
+
+libntlm (1.2-1) unstable; urgency=low
+
+  * New Upstream Version. Closes: #554722
+  * Add ${misc:Depends} to binaries' Depends since we use debhelper.
+    This makes lintian happier.
+  * Update Standards-Version to 3.8.4. We still use GNU style variables
+    for architecture specification, but that's because we use them with
+    upstream build system, as allowed by policy.
+  * Change Maintainer to XMPP team and add Simon Josefsson as uploader.
+
+ -- Thadeu Lima de Souza Cascardo <cascardo@minaslivre.org>  Tue, 30 Mar 2010 12:26:30 -0300
+
+libntlm (1.1-1) unstable; urgency=low
+
+  * New Upstream Version
+  * Remove test.txt from debian docs, thanks Ted Percival. Closes: #471587
+  * Backup and restore autogenerated files.
+  * There's no /usr/share/pkgconfig/ any more.
+  * Remove autotools-dev build-dependency.
+  * Complies with Standards Version 3.8.2.
+
+ -- Thadeu Lima de Souza Cascardo <cascardo@minaslivre.org>  Sat, 11 Jul 2009 22:49:39 -0300
+
+libntlm (1.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * Updates debhelper compat level to 5.
+  * Uses Homepage header field instead of pseudo-header in description.
+  * Package complies with policy 3.7.3 since last version.
+  * Package complies with policy 3.8.1 (only required change was homepage).
+  * Backup and restore autoconf files in configure and clean rules.
+
+ -- Thadeu Lima de Souza Cascardo <cascardo@minaslivre.org>  Wed, 01 Apr 2009 13:57:00 -0300
+
+libntlm (0.3.13-1) unstable; urgency=low
+
+  * New upstream release (Closes: #432220)
+  * New maintainer (Closes: #443445)
+  * Uses substvar binary:Version instead of Source-Version for binary NMUs
+  * Complies with policy 3.7.2.2
+  * Does not ignore make clean errors
+
+ -- Thadeu Lima de Souza Cascardo <cascardo@minaslivre.org>  Fri, 21 Sep 2007 10:14:45 -0300
+
+libntlm (0.3.10-1) unstable; urgency=low
+
+  * Initial release (Closes: #364073).
+
+ -- Yvan Bassuel <yvan@brutux.org>  Fri, 21 Apr 2006 15:34:54 +0200
